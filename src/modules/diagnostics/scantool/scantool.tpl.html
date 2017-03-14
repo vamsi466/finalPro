@@ -1,0 +1,88 @@
+<div class="scantool-div m-t-25">
+    <h6>
+        <small> Checking configurations and verifying installation.</small>
+    </h6>
+    <div class="panel panel-default m-t-25" ng-table="st.componentDetails">
+        <div class="panel-body">
+            <h4>Hardware <span class="pull-right"><i class="zmdi zmdi-refresh-sync"></i></span></h4>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="col-md-1"></th>
+                        <th class="col-md-2">Title</th>
+                        <th class="col-md-7">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="component in $data[0].Hardware">
+                        <td class="col-md-1">
+                            <div>
+                                <i class="zmdi zmdi-check zmdi-hc-2x" ng-if="(component.description.charAt(0) === 'P')" ng-style="{'color': 'green' }"></i>
+                                <i class="zmdi zmdi-alert-triangle zmdi-hc-2x" ng-if="(component.description.charAt(0) === 'W')" ng-style="{'color': '#F9A825' }"></i>
+                                <i class="zmdi zmdi-alert-circle zmdi-hc-2x" ng-if="(component.description.charAt(0) === 'F')" ng-style="{'color': '#B71C1C' }"></i>
+                            </div>
+                        </td>
+                        <td class="col-md-2">{{component.title}}</td>
+                        <td class="col-md-7">{{component.description}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="panel panel-default" ng-table="st.componentDetails">
+        <div class="panel-body">
+            <h4>Cell <span class="pull-right"><i class="zmdi zmdi-refresh-sync"></i></span></h4>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="col-md-1"></th>
+                        <th class="col-md-2">Title</th>
+                        <th class="col-md-7">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="component in $data[1].Cell">
+                        <td class="col-md-1">
+                            <div>
+                                <i class="zmdi zmdi-check zmdi-hc-2x" ng-if="(component.description.charAt(0) === 'P')" ng-style="{'color': 'green' }"></i>
+                                <i class="zmdi zmdi-alert-triangle zmdi-hc-2x" ng-if="(component.description.charAt(0) === 'W')" ng-style="{'color': '#F9A825' }"></i>
+                                <i class="zmdi zmdi-alert-circle zmdi-hc-2x" ng-if="(component.description.charAt(0) === 'F')" ng-style="{'color': '#B71C1C' }"></i>
+                            </div>
+                        </td>
+                        <td class="col-md-2">{{component.title}}</td>
+                        <td class="col-md-7">{{component.description}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <h4 class="col-md-3 col-sm-3 col-xs-3">WiFi</h4>
+            <div class="progress m-t-20 col-md-9 col-sm-9 col-xs-9">
+                <div class="progress-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width:40%;">
+                    <span class="sr-only">70% Complete</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <h4 class="col-md-3 col-sm-3 col-xs-4">Back Office</h4>
+            <div class="progress m-t-20 col-md-9 col-sm-9 col-xs-8">
+                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <h4 class="col-md-3 col-sm-3 col-xs-3">External Attachments</h4>
+            <div class="progress m-t-20 col-md-9 col-sm-9 col-xs-9">
+                <div class="progress-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                    <span class="sr-only">70% Complete</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

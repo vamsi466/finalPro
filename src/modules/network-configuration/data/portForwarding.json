@@ -1,0 +1,15 @@
+[
+    {
+      "port": 3251,
+      "type": "UDP",
+      "destination": "192.168.88.1:80"
+    },{
+      "port": 21,
+      "type": "TCP",
+      "destination": "192.168.88.1:80"
+    },{
+      "port": 8500,
+      "type": "TCP",
+      "destination": "192.168.88.1:80"
+    }
+  ]

@@ -1,0 +1,57 @@
+<div class="card card-height">
+    <div class="card-header">
+        <h2 class="pull-left">Available Networks
+            <small>Select a network to join</small>
+        </h2>
+        <div class="pull-right dropdown">
+            <button class="btn btn-link dropdown-toggle" type="button" data-toggle="dropdown"><i class="zmdi zmdi-more-vert"></i></button>
+            <ul class="dropdown-menu pull-right p-0">
+                <li><a data-toggle = 'modal' data-target= '#savedNetwork' data-backdrop="static" data-keyboard="false" ng-click="wifi.savedNetwork()">Saved Networks</a></li>
+                <li><a data-toggle = 'modal' data-target= '#addNetwork' data-backdrop="static" data-keyboard="false">Add Network</a></li>
+            </ul>
+        </div>
+        <!-- data-toggle = 'modal' data-target= '#passwordData'
+        <span class="pull-right"><i class="zmdi zmdi-more-vert"></i></span> -->
+    </div>
+    <div ng-include src="'savedNetworks.tpl.html'"></div>
+    <div ng-include src="'addNetwork.tpl.html'"></div>
+
+    <div class="card-body card-padding p-0">
+        <table ng-table="wifi.wifiNetwork" class="table table-condensed table-striped ng-table-responsive nc-table network">
+            <tr ng-repeat="user in $data track by $index" ng-click="wifi.selectNetwork(user,$index)">
+                <td title="'Network Name'">
+                    {{user.networkType}}</td>
+                <td title="'Security'">
+                    {{user.security }}
+                </td>
+                <td title="'Mode'">
+                    {{user.modeOfUse}}
+                </td>
+                <td title="'Frequency'">{{user.frequency}}</td>
+                <td title="'Mode'">{{user.mode}}
+                </td>
+                <td><i class="zmdi zmdi-wifi-alt f-16"></i></td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<div class="modal fade" id="passwordModal" role="dialog">
+    <div class="modal-dialog nc-modal-margin-top">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-title">
+                    <h4>Enter password for {{wifi.networkName}} Network</h4>
+                </div>
+            </div>
+            <div class="modal-body">
+                <input type="password" placeholder="password">
+            </div>
+            <div class="modal-footer">
+                <button type="button" data-dismiss="modal" class="btn btn-default"><a>Cancel</a></button>
+                <button type="button" data-dismiss="modal" class="btn btn-primary">JOIN NETWORK</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,51 @@
+
+  [
+    {
+      "networkType": "New Network",
+      "security": "WPA",
+      "modeOfUse": "Infrastructure",
+      "frequency": "5 GHz",
+      "mode": "N",
+      "password":""
+    },
+    {
+      "networkType": "Trimble GNSS 1",
+      "security": "WEP",
+      "modeOfUse": "Infrastructure",
+      "frequency": "5 GHz",
+      "mode": "AC",
+      "password":"trimble@1"
+    },
+    {
+      "networkType": "Trimble Guest Network",
+      "security": "WPA2 -EAP",
+      "modeOfUse": "Infrastructure",
+      "frequency": "5 GHz",
+      "mode": "AC",
+      "password":"trimble@2"
+    },
+    {
+      "networkType": "renew test",
+      "security": "C-64899",
+      "modeOfUse": "Infrastructure",
+      "frequency": "5 GHz",
+      "mode": "N",
+      "password":""
+    },
+    {
+      "networkType": "FCI-SpinTest",
+      "security": "C-3985",
+      "modeOfUse": "Infrastructure",
+      "frequency": "2.4 GHz",
+      "mode": "N",
+      "password":"fci@1234"
+    },
+    {
+      "networkType": "DaVinci",
+      "security": "C-3985",
+      "modeOfUse": "Infrastructure",
+      "frequency": "2.4 GHz",
+      "mode": "N",
+      "password":""
+    }
+  ]

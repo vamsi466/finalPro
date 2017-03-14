@@ -1,0 +1,28 @@
+<div class='container-fluid home' data-ng-controller='homeCtrl as dc'>
+    <div class='block-header'>
+        <h2>home</h2>
+    </div>
+    <div class='row'>
+        <div class="col-md-4 col-sm-6 col-xs-12" data-ng-repeat='card in dc.cardsData'>
+            <div class="card p-b-15">
+                <div class="card-header clearfix">
+                    <h2 class='pull-left'>{{card.cardtitle}}</h2>
+                    <i class="zmdi zmdi-refresh-sync pull-right"></i>
+                </div>
+                <div>
+                    <table class='table table-inner card-table m-b-10' ng-init='show = true'>
+                        <tr ng-repeat="(title,data) in card.content">
+                            <td ng-click="(title === 'Show Password')? show = !show : '' ">{{title}}</td>
+                            <td data-ng-if="title != 'Show Password' || !show">{{data}}</td>
+                            <td data-ng-if="title === 'Show Password' && show">*********</td>
+
+                        </tr>
+                    </table>
+                </div>
+                <div ng-if='card.action' class='p-r-15 clearfix'>
+                    <a href="#" class="btn btn-primary btn-lg pull-right" role="button">{{card.action}}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+<!-- Modal -->
+<div class="modal fade" id="savedNetwork" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content modal-size">
+            <div class="modal-header">
+                <div class="modal-title">
+                    <h4 class="f-700">Saved Network</h4>
+                    <small>Save up to ten networks</small>
+                </div>
+            </div>
+            <div class="modal-body">
+                <table ng-table="wifi.saveNetwork" class="table table-condensed table-striped nc-table add-table-head">
+                    <tr ng-repeat="user in $data">
+                        <td title="'Network Name'" class="text-left">{{user.networkType}}
+                        </td>
+                        <td title="'Security'" class="text-right">
+                            {{user.security }}
+                        </td>
+                        <td title="''"><i class="zmdi zmdi-delete f-16" ng-click="wifi.deleteNetwork($index)"></i> </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" data-dismiss="modal" class="btn btn-default"><a>Cancel</a></button>
+                <button type="button" data-dismiss="modal" class="btn btn-primary"  ng-disabled="wifi.dataDelete" ng-click="wifi.saveAfterDelete()">SAVE</button>
+            </div>
+        </div>
+    </div>
+</div>

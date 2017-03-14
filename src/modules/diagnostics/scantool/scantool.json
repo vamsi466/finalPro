@@ -1,0 +1,90 @@
+{"scanTools":
+  [
+    {"Hardware":
+      [
+        {
+          "title":"Chassis Ground"  ,
+          "description" : "Pass - Chassis Ground not connected to voltage souce",
+          "status": "done",
+          "color":"green"
+        },
+        {
+          "title":"Input Voltage"  ,
+          "description" : "Pass",
+          "status": "done",
+          "color":"green"
+        },
+        {
+          "title":"SMH Source"  ,
+          "description" : "Warning - the selected Service Meter Hours Source does not detect a connection, however if you are not tracking SMH ignore this warning",
+          "status":"warning",
+          "color":"#F9A825"
+        },
+        {
+          "title":"Recipe"  ,
+          "description" : "Fail - couldn’t determine recipe in back office IP",
+          "status":"error",
+          "color":"#B71C1C"
+        },
+        {
+          "title":"Cell Modem Status"  ,
+          "description" : "Fail - Cell Modem broken or something else",
+          "status":"error",
+          "color":"#B71C1C"
+        }
+      ]
+  },
+    {"Cell": 
+      [
+         {
+          "title":"SIM Card Detection",
+          "description" : "Pass",
+          "status": "done",
+          "color":"green"
+         },
+         {
+          "title":"SIM Card",
+          "description" : "Pass",
+          "status": "done",
+          "color":"green"
+         },
+         {
+          "title":"Tower Availability",
+          "description" : "Pass",
+          "status": "done" ,
+          "color":"green"
+         },
+         {
+          "title":"Signal Strength",
+          "description" : "Fail - Proin bibendum, ligula vel pretium ultrices,urna turpis vulputate quam, et bibendum tellus risus",
+          "status":"error",
+          "color":"#B71C1C"
+         },
+         {
+          "title":"Signal Strength",
+          "description" : "Warning - Cras porttitor in neque ut aliquam.",
+          "status":"warning",
+          "color":"#F9A825"
+         },
+         {
+          "title":"APN Status",
+          "description" : "Pass",
+          "status": "done",
+          "color":"green"
+         },
+         {
+          "title":"Internet Connectivity",
+          "description" : "Pass",
+          "status": "done",
+          "color":"green"
+         },
+         {
+          "title":"DNS Availability",
+          "description" : "Warning - Proin bibendum, ligula vel pretium ultrices, urna turpis vulputate quam, et bibendum tellus",
+          "status":"warning",
+          "color":"#F9A825"
+         }
+       ]
+    }
+  ]
+}

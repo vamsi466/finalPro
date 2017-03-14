@@ -1,0 +1,63 @@
+[
+{ "cardtitle" : "Device Info",
+  "content" : {
+  	"Serial Number" : "5107510051",
+  	"Firmware Version" : "3e15b1a9_PROD-7.3.0",
+  	"Internet Status" : "Connected",
+  	"Vision Link" : "Connected" 
+  }
+
+},
+{
+  "cardtitle" : "Cell Status",
+  "content" : {
+    "Carrier" : "AT&T",
+    "Mode" : "4G",
+    "Signal Strength" : "-97 dBm"
+  },
+   "action" : "VIEW"
+},
+{
+  "cardtitle" : "Wifi Status",
+  "content" : {
+    "Connected To" : "Meraki WPA2 Test",
+    "Mode" : "Infrastructure",
+    "Strength" : "-72 dBm"
+  },
+   "action" : "VIEW NETWORKS"
+},
+{
+  "cardtitle" : "GPS Status",
+  "content" : {
+    "Satalites Tracked" : 12,
+    "Estimated Accuracy" : "2 cm"
+  },
+  "action" : "CONFIGURE"
+},
+{
+ "cardtitle" : "Device Connection Status",
+ "content" : {
+   "Ethernet" : "Connected",
+   "Serial Port Mode" : "ppp",
+   "USB" : "not connected"
+ }
+},
+{
+  "cardtitle" : "Service Network Status",
+ "content" : {
+   "Network Name": "Dozer 3",
+    "SSID Mode" : "Visible",
+    "Encryption Mode" : "WPA",
+    "Show Password" : "Password"
+ },
+  "action" : "CONFIGURE"
+},
+{
+  "cardtitle" : "Device Input Status",
+ "content" : {
+    "Ignition Switch": "N/A",
+    "System Voltage": "14.1 V"
+ }
+}
+
+]

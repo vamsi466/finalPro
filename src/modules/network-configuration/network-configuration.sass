@@ -1,0 +1,70 @@
+.network-conf
+	.nav-tabs 
+		border-bottom: 1px solid #d3d3da
+		li
+			a
+				color: #afb3be
+				&:hover
+					color: black
+					border-bottom-color: #17a0d9
+				&:active
+					color: black
+					border-bottom-color: #17a0d9
+				&:focus
+					color: black
+					border-bottom-color: #17a0d9
+	.nc-table
+		th
+			text-align: left
+			font-weight: bold
+			text-transform: none
+		thead
+			tr
+				th:first-child
+					padding-left: 20px					
+			tr
+				td:first-child
+					padding-left: 20px
+					text-align: left
+				
+			td
+				padding-bottom: 6px
+		tr
+			td:last-child
+				padding-right: 20px	
+				text-align: right
+	.add-table-head
+		th
+			text-align: right
+		th:first-child
+			text-align: left
+				
+	.ng-table-pager 
+		display: none
+
+	@media (max-width: 768px) 
+		.nc-table 
+			thead
+				display: none
+			tbody
+				tr
+					td
+						text-align: right
+					td:first-child
+						text-align: right
+	.network
+		tbody
+			tr:first-child
+				background: #0D6AA8
+				color: #fff
+	.hotspot-table
+		tbody
+			tr
+				background: #fff !important
+	.disable-table
+		opacity: 0.7
+
+	.modal-size
+		width: 80% 
+		margin-left: 40px
+		margin-top: 30% 

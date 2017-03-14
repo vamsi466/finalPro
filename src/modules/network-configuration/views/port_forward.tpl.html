@@ -1,0 +1,28 @@
+<div class="card">
+    <div class="card-header">
+        <h2 class="pull-left">Port Forwarding <small>Configure up to ten ports</small></h2>
+
+        <div class="pull-right">
+            <i class="zmdi zmdi-plus-square f-16" data-toggle="modal" data-target="#addBox"></i>
+
+        </div>
+
+    </div>
+    <div class="card-body card-padding p-0">
+        <table ng-table="port.portForwarding " class="table table-condensed table-striped nc-table ng-table-responsive">
+            <tr ng-repeat="user in $data">
+                <td class="p-l-20" title="'Port'">
+                    {{user.port}}</td>
+                <td class="p-l-o" title="'Type'">
+                    {{user.type}}</td>
+                <td title="'Destination'">
+                    {{user.destination }}
+                </td>
+                <td class="p-l-o" title="" class="pull-right">
+                    <i class="zmdi zmdi-edit f-16"></i>
+                    <i class="zmdi zmdi-delete f-16"></i>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

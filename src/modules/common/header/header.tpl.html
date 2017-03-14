@@ -1,0 +1,48 @@
+<div class="app-title ng-scope visible-md visible-lg">SNM941</div>
+<!-- <div class="ng-scope visible-sm">SNM941</div> -->
+<ul class="header-inner clearfix header">
+    <li id="menu-trigger" data-ng-click="mactrl.sidebarToggle.left = !mactrl.sidebarToggle.left" data-ng-class="{ 'open': mactrl.sidebarToggle.left === true }">
+        <div class="line-wrap">
+            <div class="line top"></div>
+            <div class="line center"></div>
+            <div class="line bottom"></div>
+        </div>
+    </li>
+    <li class="hidden-xs hidden-sm">
+        <a href="index.html" class="m-l-10" data-ng-click="mactrl.sidebarStat($event)">
+            <!--<img src="../src/assets/TrimbleCore/img/trimble-logo.png" alt="Trimble">-->
+        </a>
+    </li>
+    <li class="visible-sm">
+        <a href="index.html" class="m-l-10"> SNM941 </a>
+    </li>
+    <li class="pull-right">
+        <ul class="top-menu">
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown"><i class="tm-icon zmdi zmdi-globe-alt"></i></a>
+                <ul class="dropdown-menu pull-right">
+                    <li><a href="#">English</a></li>
+                    <li><a href="#">Español</a></li>
+                    <li><a href="#">Deutsch</a></li>
+                    <li><a href="#">Français</a></li>
+                    <li><a href="#">Português</a></li>
+                    <li><a href="#">日本語</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown"> <i class="tm-icon zmdi zmdi-account"></i> </a>
+                <ul class="dropdown-menu pull-right">
+                    <form class="p-10 sign-in-button">
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="email" placeholder="Enter email">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+                        </div>
+                        <button type="button" class="btn btn-primary btn-block">SIGN IN</button>
+                    </form>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>

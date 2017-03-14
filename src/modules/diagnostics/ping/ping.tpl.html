@@ -1,0 +1,17 @@
+<div class="pingtemplate m-t-10">
+    <div class="panel panel-default">
+        <div class="panel-body row">
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                <div ng-hide="pnc.wrongPort" ng-style="{'color': '#B71C1C' }">
+                    <span ng-style="{'color': '#B71C1C' }"><b>Succesful Packets:# &nbsp Dropped Packets:#</b></span>
+                </div>
+                <span>
+                    <i class="zmdi zmdi-check zmdi-hc-2x p-5" ng-show="pnc.correctPort" ng-style="{'color': 'green' }"></i>
+                    <i class="zmdi zmdi-alert-circle zmdi-hc-2x p-5 " ng-hide="pnc.wrongPort" ng-style="{'color': '#B71C1C' }"></i>
+                    <input type="text" placeholder='8.8.8.8'ng-class="(pnc.correctPort == true)?'correctPort':(pnc.wrongPort == false)?'wrongPort':'normal'"  class="custom-text" data-ng-model="pnc.portInput">
+                    <button type="button" data-ng-click="pnc.checkWithPorts()" class="btn btn-primary custom-button">Server</button>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>

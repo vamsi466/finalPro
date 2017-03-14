@@ -1,0 +1,24 @@
+<div class="container-fluid network-conf">
+    <div class="block-header">
+        <h2>Network Configurations
+            <small>WIFI related setups</small>
+        </h2>
+    </div>
+    <div>
+        <ul class="nav nav-tabs">
+            <li role="presentation">
+                <a ui-sref="networkconfig.wifi">WIFI</a>
+            </li>
+            <li role="presentation">
+                <a ui-sref="networkconfig.hotspot">HOTSPOT</a>
+            </li>
+            <li role="presentation">
+                <a ui-sref="networkconfig.portForwarding">PORT FORWARDING</a>
+            </li>
+        </ul>
+        <div>
+            <ui-view></ui-view>
+        </div>
+    </div>
+
+</div>

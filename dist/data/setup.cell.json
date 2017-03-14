@@ -1,0 +1,14 @@
+{"Cell":
+  [
+    {"cell":
+      [
+        {
+          "modemtype":"America's"  ,
+          "EMEI" : "354114013039012",
+          "phonenumber": "555-555-5555",
+          "accesspointname":"proxy.trimble.com"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+<div data-ng-controller="cellCtrl as cc" class="cell-template">
+    <div class="m-t-50">
+        <div class="panel panel-default" ng-table="cc.componentDetails">
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-3 custom-title">
+                        <b class="m-l-30 f-15">Modem type</b>
+                        <div class="m-t-20 f-15">
+                            <span class="f-20"><i class="fa fa-signal" aria-hidden="true"></i></span><span class="m-l-15">America's</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3 custom-description">
+                        <b class="f-15">EMEI</b>
+                        <p class="m-t-20 f-15">354114013039012</p>
+                    </div>
+                    <div class="col-md-3 custom-description">
+                        <b class="f-15">Phone Number</b>
+                        <p class="m-t-20 f-15">555-555-5555</p>
+                    </div>
+                    <div class="col-md-3 custom-description">
+                        <b class="f-15">Access Point Name</b>
+                        <p class="m-t-20 f-15">proxy.trimble.com</p>
+                    </div>
+                    <div>
+                        <i class="zmdi zmdi-edit f-16">
+                    </div>
+                </div>
+                <div class="row m-t-30 m-l-20">
+                    <div class="col-md-3">
+                        <input type="text" placeholder="Access Point Name(APN)" class="p-l-10 input-class">
+                    </div>
+                    <div class="col-md-3">
+                        <input type="text" placeholder="4-8 Digit Pin" class="p-l-10 input-class1">
+                    </div>
+                    <div class="col-md-3">
+                        <input type="text" placeholder="APN Username" class="p-l-10 input-class">
+                    </div>
+                    <div class="col-md-3">
+                        <input type="text" placeholder="APN Password" class="p-l-10 input-class">
+                    </div>
+                </div>
+                <div class="row m-t-15">
+                    <div class="col-md-offset-8 col-md-2">
+                        <p>*Required Fields</p>
+                    </div>
+                    <div class="col-md-2">
+                        <button class="btn btn-primary">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

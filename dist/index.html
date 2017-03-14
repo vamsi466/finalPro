@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html data-ng-app="cecApp">
+
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+    <title>TrimbleCEC</title>
+</head>
+
+<body class="sw-toggled" data-ng-controller="mainCtrl as mactrl">
+    <div>
+        <header id="header" data-current-skin="trimble-yellow" data-ng-include="'header.tpl.html'"></header>
+        <section id="main">
+            <aside id="sidebar" data-ng-include="'left-sidenav.tpl.html'" data-ng-class="{ 'toggled': mactrl.sidebarToggle.left === true }"></aside>
+            <section id="content">
+                <ui-view></ui-view>
+            </section>
+        </section>
+    </div>
+<script type="text/javascript" src="vendor.bundle.js"></script><script type="text/javascript" src="app.bundle.js"></script></body>
+
+</html>

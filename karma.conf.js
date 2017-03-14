@@ -1,0 +1,48 @@
+var fullWebpackConfig, webpack, webpackConfig;
+
+webpack = require('webpack');
+
+fullWebpackConfig = require('./webpack.config.js');
+
+webpackConfig = {
+  module: fullWebpackConfig.module,
+  resolve: fullWebpackConfig.resolve,
+  plugins: [
+    new webpack.ProvidePlugin({
+      "contentful": "contentful"
+    })
+  ],
+  devtool: 'eval',
+  cache: true
+};
+
+module.exports = function(config) {
+  return config.set({
+    basePath: __dirname,
+    frameworks: ['mocha', 'chai'],
+    files: [
+      'node_modules/angular/angular.js',
+      'node_modules/angular-mocks/angular-mocks.js',
+      'tests/**/*.spec.js'
+    ],
+    exclude: [],
+    plugins: [
+      require('karma-webpack'),
+      require('karma-mocha'),
+      require('karma-chai'),
+      require('karma-firefox-launcher')
+    ],
+    preprocessors: {
+      'tests/**/*.spec.js': ['webpack']
+    },
+    webpack: webpackConfig,
+    reporters: ['progress'],
+    port: 9876,
+    colors: true,
+    logLevel: config.LOG_INFO,
+    autoWatch: true,
+    browsers: ['Firefox'],
+    singleRun: false
+  });
+};
+

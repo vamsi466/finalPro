@@ -1,0 +1,80 @@
+<div class="card">
+    <div class="card-header">
+        <h2 class="pull-left">Hotspot <small>Settings for your hot spot</small></h2>
+
+        <div class="pull-right">
+
+            <div>
+                <div class="toggle-switch" ng-click="hotspot.toggleSwitch()">
+                    <label for="ts1" class="ts-label m-r-5">OFF</label>
+                    <input id="ts1" type="checkbox" hidden="hidden" ng-model="hotspot.isChecked">
+                    <label for="ts1" class="ts-helper"></label>
+                    <label for="ts1" class="ts-label m-l-5">ON</label>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="card-body card-padding p-0" ng-if="hotspot.show">
+        <table ng-table="hotspot.hotspotData " class="table table-condensed table-striped nc-table ng-table-responsive hotspot-table" ng-class='(hotspot.show && !hotspot.isChecked )? "disable-table" : ""'>
+            <tr ng-repeat="user in $data ">
+                <td class="col-md-3" title="'Network Name'"> {{user.networkName}}</td>
+                <td class="col-md-3" title="'Password'">
+                    <span ng-repeat="star in (user.password).split('') track by $index">*</span>
+                </td>
+                <td class="col-md-2" title="'Channel'">
+                    {{user.numberOfChannels}}
+                </td>
+                <td class="col-md-2" title=" 'SSID Mode' ">{{user.ssidMode}}</td>
+                <td class="col-md-2" title=" 'Encryption' ">{{user.encryption}}</td>
+                <td class="pull-right"><i class="zmdi zmdi-edit f-16" ng-click="hotspot.show=(hotspot.isChecked == false)?hotspot.show:!hotspot.show"></i></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="card-body card-padding p-0" ng-if="!hotspot.show">
+        <table ng-table="hotspot.hotspotData " class="table table-condensed table-striped nc-table ng-table-responsive hotspot-table">
+            <tr ng-repeat="user in $data ">
+                <td class="col-md-2" title="'Network Name'">
+                    <div class="form-group  ">
+                        <div class="fg-line">
+                            <input type="text" class="form-control fg-input" ng-model="user.networkName">
+                        </div>
+                    </div>
+                </td>
+                <td class="col-md-2" title="'Password'">
+                    <div class="form-group  m-b-30">
+                        <div class="fg-line">
+                            <input type="text" class="form-control fg-input" ng-model="user.password">
+                        </div>
+                    </div>
+                </td>
+                <td class="col-md-1" title="'Channel'">
+                    <div class="fg-line">
+                        <div class="select">
+                            <select class="form-control" ng-model="user.numberOfChannels" ng-options="item for item in [1,2,3,4,5,6,7,8,9,10,11]"></select>
+                        </div>
+                    </div>
+                </td>
+                <td colspan="2" class="col-md-2" title=" 'SSID Mode' ">
+                    <div class="fg-line">
+                        <div class="select">
+                            <select class="form-control" ng-model="user.ssidMode" ng-options="item for item in ['Broadcast','Hidden']"></select>
+                        </div>
+                    </div>
+                </td>
+                <td class="col-md-2" title=" 'Encryption' ">
+                    <div class="fg-line">
+                        <div class="select">
+                            <select class="form-control" ng-model="user.encryption" ng-options="item for item in ['WPA2','Open']"></select>
+                        </div>
+                    </div>
+
+                </td>
+                <td class="col-md-2"><button class="btn btn-primary" ng-click="hotspot.show=(hotspot.isChecked == false)?hotspot.show:!hotspot.show">SAVE</button></td>
+            </tr>
+        </table>
+    </div>
+
+</div>

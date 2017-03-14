@@ -1,0 +1,9 @@
+[
+    {
+      "networkName": "Dozer 3",
+      "password": "password1",
+      "numberOfChannels": 9,
+      "ssidMode": "Broadcast",
+      "encryption": "WPA2"
+    }
+  ]

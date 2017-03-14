@@ -1,0 +1,185 @@
+@charset "UTF-8";
+/* CSS Document */
+
+[data-current-skin="trimble-yellow"] {
+  background-color: #FFBE00;
+}
+
+[data-current-skin="white"] {
+  background-color: #fff;
+}
+
+[data-current-skin="trimble-blue"] {
+  background-color: #00437b;
+color:#fff;
+}
+
+[data-current-skin="trimble-blue"] .logo a, [data-current-skin="trimble-blue"] .top-menu > li > a {
+color: #fff;
+}
+
+[data-current-skin="trimble-blue"] #menu-trigger .line-wrap .line {
+    background-color:#fff;
+
+}
+
+@media (min-width: 1199px) {
+  body.sw-toggled .breadcrumb {
+    padding: 10px 33px 11px 0px;
+  }
+}
+/* login page */
+    body.login-content:before, body.four-zero-content:before {
+  display:none;
+}
+
+.login-content > .text-center {
+    margin:80px 0;
+}
+.login-content h4 {
+    line-height: 40px;
+}
+
+.lc-block {
+    vertical-align: top;
+    padding:0;
+}
+
+.lcb-alt, .lc-block.toggled {
+    padding:0;
+}
+
+.lcb-alt > .card, .lcb-alt, .lc-block.toggled > .card  {
+    
+    margin-bottom: 0;
+}
+
+/* 404 page */
+.four-zero {
+    background-color: #002D5B
+;
+    vertical-align: middle;
+}
+
+.four-zero-content {
+    background:#F3F3F7; 
+}
+
+.middle {
+  margin-top:50px;  /* try to do a vertical here couldn't make it work */
+    
+}
+
+.text-white {
+    
+color:#fff;
+}
+
+/* lockscreen */
+body.login-content > .card-body .card-padding {
+    
+    margins:auto 0;
+}
+
+/*Calendar Widget */
+
+
+#calendar-widget .fc-toolbar {
+    background: #197CB6 ;
+}
+
+#calendar-widget .fc-day-header {
+    background:#0D6AA8;
+}
+
+/* messages */
+
+.lv-message .lv-item:not(.right) .ms-item {
+    background:#607d8b;
+    
+}
+
+
+/* timeline */
+
+.load-more a {
+      background: #197CB6 ;
+}
+
+.load-more a:hover {
+        background:  #00437B;
+    
+}
+
+    .t-view .tvb-stats > li.tvbs-likes {
+    border-color: #197CB6;
+    color: #197CB6;
+}
+
+
+.t-view .tvb-stats > li.tvbs-comments {
+     border-color: #5E9331;
+    color: #5E9331;    
+}
+
+.t-view .tvb-stats > li.tvbs-views {
+    
+    border-color: #A51D25;
+    color: #A51D25;    
+}
+
+
+#profile-main .pmo-pic .pmo-stat {
+    background:  #00437B;
+}
+
+.p-menu > li:not(.active) > a {
+    color: #0D6AA8 ;
+    
+}
+
+/* messages  */
+    
+    .ms-reply button {
+      color:  #0D6AA8
+    }
+
+/* wall */
+
+[data-wpba="image"] {
+    color: #5E9331;
+}
+
+[data-wpba="video"], [data-wpba="video"]:hover {
+    color: #0D6AA8;   
+}
+
+[data-wpba="link"] {
+    color: #009AD9;   
+}
+
+
+/*
+ * Header Actions
+ */
+
+.actions > li > a > i, .actions > a > i {
+
+    color: #AEAEB6;
+}
+
+.actions > li > a:hover > i,
+.actions > a:hover > i {
+color: #363545;
+}
+
+/* Modal Windwows */
+
+.sweet-alert {
+text-align: left;
+    padding:20px;
+}
+
+.sweet-alert .btn {
+    float:right;
+}

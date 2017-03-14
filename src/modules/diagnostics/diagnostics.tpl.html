@@ -1,0 +1,24 @@
+<div class="container-fluid main-div">
+    <div class="block-header">
+        <h2><span class="text-capitalize">Daignostics<br><small>Tools to solve connectivity Problems</small></span> <span class="pull-right text-capitalize">Download Log File <i class="zmdi zmdi-download m-l-5"></i></span>
+            <!--<small class="m-t-5">Tools to solve connectivity Problems</small>-->
+        </h2>
+    </div>
+    <ul class="nav nav-tabs text-uppercase">
+        <li role="presentation">
+            <a ui-sref="diagnostics.networkinterface">Network Interfaces</a>
+        </li>
+        <li role="presentation">
+            <a ui-sref="diagnostics.ping">Ping</a>
+        </li>
+        <li role="presentation">
+            <a ui-sref="diagnostics.scantool">Scan Tool</a>
+        </li>
+        <li role="presentation">
+            <a ui-sref="diagnostics.reboot">Reboot</a>
+        </li>
+    </ul>
+    <div>
+        <ui-view></ui-view>
+    </div>
+</div>
